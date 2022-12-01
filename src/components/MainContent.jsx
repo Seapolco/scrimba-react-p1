@@ -1,4 +1,5 @@
 import React from 'react';
+import backgroundLogo from '../assets/reactjs-icon2.png'
 
 const MainContent = () => {
     return (
@@ -12,6 +13,7 @@ const MainContent = () => {
                 <li>Powers thousands of enterprise apps, including <br/>
                     mobile apps</li>
             </ul>
+            <img className='backgroundLogo' src={backgroundLogo} />
         </main>
     )
 }

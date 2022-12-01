@@ -13,10 +13,14 @@ body,html,#root, .App {
 }
 
 .navContainer {
+  position:relative;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   padding: 30px;
   background-color: rgb(33,34,42);
+  box-shadow: 0 2px 4px -2px rgba(0,0,0,0.7);
+  
 
 }
 
@@ -35,6 +39,23 @@ body,html,#root, .App {
   font-size: 2rem;
   color: rgb(97,219,251);
   align-self: center;
+  /* -webkit-text-stroke-color: #000;
+  -webkit-text-stroke-width: 1px; */
+}
+
+.reactFacts {
+  position: relative;
+  /* We need double the stroke width because half of it gets covered up */
+  -webkit-text-stroke: 4px black;
+}
+.reactFacts::after {
+  /* Place a second copy of the same text over top */
+  content:"React Facts";
+  position: absolute;
+  left: 0;
+  -webkit-text-stroke: 0;
+  color: rgb(97,219,251);;
+  pointer-events: none;
 }
 
 .reactCourse {
@@ -65,6 +86,7 @@ body,html,#root, .App {
   color: #ffffff;
   font-weight: bold;
   padding: 0 0 40px 30px
+
 }
 
 .factsList {
@@ -80,6 +102,13 @@ body,html,#root, .App {
 ul li::marker {
   color: #61DAFB;
   font-size: 1.5rem;
+}
+
+.backgroundLogo {
+  position: absolute;
+  z-index: 1;
+  right: -70px;
+  top: 30%;
 }
 
 
